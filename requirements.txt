@@ -1,0 +1,12 @@
+# Scorer requirements (as provided)
+matplotlib>=3.8,<4
+numpy>=1.26,<3
+pandas>=2.0,<3
+
+# Solution
+scikit-learn>=1.4,<2
+reportlab>=4,<6        # only to rebuild the PDF report
+pytest>=8              # only to run the tests
+
+# The solution package itself (src/freight_rate), installed in editable mode
+-e .

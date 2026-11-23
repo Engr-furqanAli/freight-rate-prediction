@@ -1,0 +1,495 @@
+{
+  "audit": {
+    "rows": {
+      "train": 48000,
+      "validation": 12000
+    },
+    "date_range": {
+      "train": [
+        "2025-01-01",
+        "2025-10-31"
+      ],
+      "validation": [
+        "2025-11-01",
+        "2025-12-31"
+      ]
+    },
+    "validation_rows_by_month": {
+      "Nov": 5836,
+      "Dec": 6164
+    },
+    "duplicates": {
+      "train_load_id": 0,
+      "validation_load_id": 0,
+      "train_full_rows": 0
+    },
+    "weight": {
+      "train": {
+        "missing": 300,
+        "missing_pct": 0.62,
+        "negative": 292,
+        "negative_pct": 0.61,
+        "at_cap_47500": 1204,
+        "median_abs_negative": 31821.5,
+        "median_positive": 31493.5
+      },
+      "validation": {
+        "missing": 165,
+        "missing_pct": 1.38,
+        "negative": 145,
+        "negative_pct": 1.21,
+        "at_cap_47500": 301,
+        "median_abs_negative": 32517.0,
+        "median_positive": 31323.5
+      }
+    },
+    "market_index": {
+      "train": {
+        "missing": 374,
+        "missing_pct": 0.78,
+        "mean": 1.0834,
+        "std": 0.1681,
+        "min": 0.6764,
+        "max": 1.4678,
+        "within_day_std": 0.0249,
+        "between_day_std": 0.1665
+      },
+      "validation": {
+        "missing": 249,
+        "missing_pct": 2.08,
+        "mean": 0.9269,
+        "std": 0.0741,
+        "min": 0.7236,
+        "max": 1.099,
+        "within_day_std": 0.0248,
+        "between_day_std": 0.0714
+      }
+    },
+    "labels": {
+      "corrupt": 677,
+      "corrupt_pct": 1.41,
+      "scaled_down": 337,
+      "scaled_up": 340,
+      "scaled_down_range": [
+        0.17,
+        0.47
+      ],
+      "scaled_up_range": [
+        2.1,
+        5.28
+      ],
+      "clean_range": [
+        0.82,
+        1.27
+      ],
+      "corrupt_by_month": {
+        "Jan": 81,
+        "Feb": 57,
+        "Mar": 71,
+        "Apr": 66,
+        "May": 62,
+        "Jun": 63,
+        "Jul": 65,
+        "Aug": 68,
+        "Sep": 64,
+        "Oct": 80
+      }
+    },
+    "unseen_cities": {
+      "names": [
+        "Allentown",
+        "Charlotte",
+        "Chicago",
+        "Jackson",
+        "Knoxville",
+        "Laredo",
+        "Norfolk",
+        "San Diego"
+      ],
+      "validation_rows_touching": 1447,
+      "validation_share_pct": 12.06,
+      "cities_in_train": 64
+    },
+    "distance": {
+      "min": 70.0,
+      "max": 3439.8,
+      "rows_at_floor_70": 48
+    }
+  },
+  "quote_signal": {
+    "monthly": [
+      {
+        "set": "train",
+        "month": "Jan",
+        "corr_with_baseline": 0.924,
+        "corr_with_target": 0.995,
+        "n": 4918.0,
+        "regime": "tracks the rate"
+      },
+      {
+        "set": "train",
+        "month": "Feb",
+        "corr_with_baseline": 0.92,
+        "corr_with_target": 0.995,
+        "n": 4337.0,
+        "regime": "tracks the rate"
+      },
+      {
+        "set": "train",
+        "month": "Mar",
+        "corr_with_baseline": 0.919,
+        "corr_with_target": 0.996,
+        "n": 5036.0,
+        "regime": "tracks the rate"
+      },
+      {
+        "set": "train",
+        "month": "Apr",
+        "corr_with_baseline": -0.913,
+        "corr_with_target": -0.991,
+        "n": 4819.0,
+        "regime": "mirrors the rate"
+      },
+      {
+        "set": "train",
+        "month": "May",
+        "corr_with_baseline": -0.92,
+        "corr_with_target": -0.992,
+        "n": 4913.0,
+        "regime": "mirrors the rate"
+      },
+      {
+        "set": "train",
+        "month": "Jun",
+        "corr_with_baseline": 0.928,
+        "corr_with_target": 0.996,
+        "n": 4783.0,
+        "regime": "tracks the rate"
+      },
+      {
+        "set": "train",
+        "month": "Jul",
+        "corr_with_baseline": -0.914,
+        "corr_with_target": -0.992,
+        "n": 4912.0,
+        "regime": "mirrors the rate"
+      },
+      {
+        "set": "train",
+        "month": "Aug",
+        "corr_with_baseline": -0.023,
+        "corr_with_target": -0.023,
+        "n": 4759.0,
+        "regime": "noise"
+      },
+      {
+        "set": "train",
+        "month": "Sep",
+        "corr_with_baseline": 0.927,
+        "corr_with_target": 0.996,
+        "n": 4670.0,
+        "regime": "tracks the rate"
+      },
+      {
+        "set": "train",
+        "month": "Oct",
+        "corr_with_baseline": -0.917,
+        "corr_with_target": -0.991,
+        "n": 4853.0,
+        "regime": "mirrors the rate"
+      },
+      {
+        "set": "validation",
+        "month": "Nov",
+        "corr_with_baseline": -0.01,
+        "corr_with_target": NaN,
+        "n": 5836.0,
+        "regime": "noise"
+      },
+      {
+        "set": "validation",
+        "month": "Dec",
+        "corr_with_baseline": -0.014,
+        "corr_with_target": NaN,
+        "n": 6164.0,
+        "regime": "noise"
+      }
+    ],
+    "label_check": {
+      "months_where_signal_tracks_rate": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Jun",
+        "Sep"
+      ],
+      "clean_labels_median_gap_pct": 0.69,
+      "clean_labels_within_10pct": 100.0,
+      "flagged_labels_within_10pct": 0.0,
+      "flagged_labels_in_those_months": 336
+    }
+  },
+  "validation": {
+    "forward_mean": {
+      "A. Naive: median $/mile by equipment x distance": {
+        "mape": 4.361,
+        "mae": 102.205,
+        "rmse": 139.675,
+        "bias_pct": -2.196,
+        "mae_all_labels": 155.729,
+        "rmse_all_labels": 649.042
+      },
+      "B. GBM with quote_signal + calendar": {
+        "mape": 3.133,
+        "mae": 76.59,
+        "rmse": 119.145,
+        "bias_pct": -0.964,
+        "mae_all_labels": 130.138,
+        "rmse_all_labels": 638.561
+      },
+      "C. GBM without quote_signal + calendar": {
+        "mape": 2.693,
+        "mae": 64.975,
+        "rmse": 94.253,
+        "bias_pct": -0.595,
+        "mae_all_labels": 118.87,
+        "rmse_all_labels": 636.828
+      },
+      "D. Hybrid: trend only (no quarter-end ramp)": {
+        "mape": 2.373,
+        "mae": 56.252,
+        "rmse": 79.955,
+        "bias_pct": 0.653,
+        "mae_all_labels": 110.204,
+        "rmse_all_labels": 632.573
+      },
+      "E. Hybrid: trend + quarter-end ramp (final)": {
+        "mape": 1.486,
+        "mae": 35.158,
+        "rmse": 50.696,
+        "bias_pct": 0.275,
+        "mae_all_labels": 89.387,
+        "rmse_all_labels": 629.517
+      }
+    },
+    "forward_worst_fold_mape": {
+      "A. Naive: median $/mile by equipment x distance": 6.032,
+      "B. GBM with quote_signal + calendar": 4.754,
+      "C. GBM without quote_signal + calendar": 4.234,
+      "D. Hybrid: trend only (no quarter-end ramp)": 4.377,
+      "E. Hybrid: trend + quarter-end ramp (final)": 1.763
+    },
+    "forward_mape_by_fold": {
+      "A. Naive: median $/mile by equipment x distance": {
+        "Jan-Apr -> May+Jun": 6.032,
+        "Jan-May -> Jun+Jul": 5.199,
+        "Jan-Jun -> Jul+Aug": 3.623,
+        "Jan-Jul -> Aug+Sep": 3.472,
+        "Jan-Aug -> Sep+Oct": 3.48
+      },
+      "B. GBM with quote_signal + calendar": {
+        "Jan-Apr -> May+Jun": 2.516,
+        "Jan-May -> Jun+Jul": 2.5,
+        "Jan-Jun -> Jul+Aug": 4.754,
+        "Jan-Jul -> Aug+Sep": 3.744,
+        "Jan-Aug -> Sep+Oct": 2.151
+      },
+      "C. GBM without quote_signal + calendar": {
+        "Jan-Apr -> May+Jun": 2.77,
+        "Jan-May -> Jun+Jul": 2.114,
+        "Jan-Jun -> Jul+Aug": 4.234,
+        "Jan-Jul -> Aug+Sep": 2.033,
+        "Jan-Aug -> Sep+Oct": 2.312
+      },
+      "D. Hybrid: trend only (no quarter-end ramp)": {
+        "Jan-Apr -> May+Jun": 1.696,
+        "Jan-May -> Jun+Jul": 2.039,
+        "Jan-Jun -> Jul+Aug": 4.377,
+        "Jan-Jul -> Aug+Sep": 1.848,
+        "Jan-Aug -> Sep+Oct": 1.904
+      },
+      "E. Hybrid: trend + quarter-end ramp (final)": {
+        "Jan-Apr -> May+Jun": 1.391,
+        "Jan-May -> Jun+Jul": 1.415,
+        "Jan-Jun -> Jul+Aug": 1.763,
+        "Jan-Jul -> Aug+Sep": 1.422,
+        "Jan-Aug -> Sep+Oct": 1.439
+      }
+    },
+    "forward_worst_month_abs_bias": {
+      "A. Naive: median $/mile by equipment x distance": 6.3,
+      "B. GBM with quote_signal + calendar": 2.29,
+      "C. GBM without quote_signal + calendar": 3.08,
+      "D. Hybrid: trend only (no quarter-end ramp)": 3.58,
+      "E. Hybrid: trend + quarter-end ramp (final)": 1.22
+    },
+    "forward_bias_by_month_final": {
+      "bias_May": -0.22,
+      "bias_Jun": -0.34,
+      "bias_Jul": 0.64,
+      "bias_Aug": 1.22,
+      "bias_Sep": 0.45,
+      "bias_Oct": -0.94
+    },
+    "random_mean": {
+      "B. GBM with quote_signal + calendar": {
+        "mape": 1.049,
+        "mae": 24.695,
+        "rmse": 36.901,
+        "bias_pct": 0.01,
+        "mae_all_labels": 75.013,
+        "rmse_all_labels": 588.039
+      },
+      "E. Hybrid: trend + quarter-end ramp (final)": {
+        "mape": 1.328,
+        "mae": 31.219,
+        "rmse": 45.35,
+        "bias_pct": 0.013,
+        "mae_all_labels": 81.426,
+        "rmse_all_labels": 588.302
+      }
+    },
+    "unseen_city_mean": {
+      "known cities only": {
+        "mape": 1.438,
+        "mae": 33.386,
+        "bias_pct": -0.402,
+        "n": 7211.6
+      },
+      "touches unseen city": {
+        "mape": 1.574,
+        "mae": 39.301,
+        "bias_pct": -0.339,
+        "n": 2167.4
+      }
+    }
+  },
+  "final_model": {
+    "training_rows": 47323,
+    "trend_pct_per_month": 0.597,
+    "quarter_end_ramp_pct": 4.039,
+    "market_index_log_points_per_unit": 0.1414,
+    "flatbed_premium_pct": 8.38,
+    "reefer_premium_pct": 12.94,
+    "weight_pct_per_10k_lb": 3.03,
+    "linear_effects": {
+      "eq_flatbed": 0.0805,
+      "eq_reefer": 0.12164,
+      "log_distance": 0.76226,
+      "log_distance_sq": 0.00799,
+      "weight_k": 0.02987,
+      "weight_missing": -9e-05,
+      "pickup_lat": -0.00338,
+      "pickup_lon": -4e-05,
+      "delivery_lat": -0.0033,
+      "delivery_lon": -8e-05,
+      "market_index": 0.14137,
+      "t_months": 0.00596,
+      "qe_ramp": 0.0396
+    },
+    "validation_predictions": {
+      "rows": 12000,
+      "min": 196.89,
+      "max": 7102.3,
+      "mean_rate_per_mile_Nov": 2.1964,
+      "mean_rate_per_mile_Dec": 2.2483,
+      "train_clean_mean_rate_per_mile_Oct": 2.2075
+    },
+    "december_chart": {
+      "first": 834.42,
+      "last": 878.08,
+      "min": 834.42,
+      "max": 878.08
+    }
+  },
+  "ablations": {
+    "ablation_mape": {
+      "E. Hybrid: trend + quarter-end ramp (final)": 1.486,
+      "+ day-of-week in the trees": 1.49,
+      "+ slow market level (7-day mean) in the linear stage": 1.432,
+      "coordinates in the linear stage only": 1.925,
+      "linear stage only (no trees)": 2.053,
+      "without the trend": 2.766,
+      "without market_index": 4.744
+    },
+    "ablation_folds_better_than_final": {
+      "E. Hybrid: trend + quarter-end ramp (final)": 0,
+      "+ day-of-week in the trees": 1,
+      "+ slow market level (7-day mean) in the linear stage": 2,
+      "coordinates in the linear stage only": 0,
+      "linear stage only (no trees)": 0,
+      "without the trend": 0,
+      "without market_index": 0
+    },
+    "ablation_worst_month_abs_bias": {
+      "E. Hybrid: trend + quarter-end ramp (final)": 1.22,
+      "+ day-of-week in the trees": 1.22,
+      "+ slow market level (7-day mean) in the linear stage": 1.29,
+      "coordinates in the linear stage only": 1.22,
+      "linear stage only (no trees)": 1.28,
+      "without the trend": 4.2,
+      "without market_index": 7.81
+    },
+    "gbm_grid": [
+      {
+        "max_leaf_nodes": 7,
+        "max_iter": 200,
+        "mape": 1.633,
+        "worst_fold_mape": 1.856
+      },
+      {
+        "max_leaf_nodes": 7,
+        "max_iter": 400,
+        "mape": 1.566,
+        "worst_fold_mape": 1.829
+      },
+      {
+        "max_leaf_nodes": 7,
+        "max_iter": 800,
+        "mape": 1.526,
+        "worst_fold_mape": 1.807
+      },
+      {
+        "max_leaf_nodes": 15,
+        "max_iter": 200,
+        "mape": 1.559,
+        "worst_fold_mape": 1.822
+      },
+      {
+        "max_leaf_nodes": 15,
+        "max_iter": 400,
+        "mape": 1.518,
+        "worst_fold_mape": 1.797
+      },
+      {
+        "max_leaf_nodes": 15,
+        "max_iter": 800,
+        "mape": 1.496,
+        "worst_fold_mape": 1.779
+      },
+      {
+        "max_leaf_nodes": 31,
+        "max_iter": 200,
+        "mape": 1.525,
+        "worst_fold_mape": 1.796
+      },
+      {
+        "max_leaf_nodes": 31,
+        "max_iter": 400,
+        "mape": 1.497,
+        "worst_fold_mape": 1.775
+      },
+      {
+        "max_leaf_nodes": 31,
+        "max_iter": 800,
+        "mape": 1.486,
+        "worst_fold_mape": 1.763
+      }
+    ]
+  },
+  "quarter_end_ramp_by_month_pct": {
+    "Mar": 3.89,
+    "Jun": 4.02,
+    "Sep": 4.21
+  }
+}
